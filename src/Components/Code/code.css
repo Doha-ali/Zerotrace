@@ -1,0 +1,82 @@
+.code-reviewContainer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #1c395f;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: auto;
+    height: 90vh;
+    margin: 50px 0px;
+    width: 85%;
+  }
+  
+  .secTool2{
+    width: 48%;
+    height: 80%;
+   
+  }
+  
+  .secTool2 h3 {
+    color: white;
+    margin-bottom: 10px;
+  }
+  .res{
+    margin-top: 40px;
+  }
+  .uploadContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .uploadBtn {
+    background: #1d4ed8;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .file-name {
+    color: white;
+    font-size: 14px;
+  }
+  
+  .enterCode,
+  .resultBox{
+    width: 100%;
+    height: 90%;
+    background: #f3f3f3;
+    border: none;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 14px;
+    resize: none;
+    
+  }
+  
+  .resultBox{
+    width: 100%;
+    height: 90%;
+    background: #f3f3f3;
+  }
+  
+  .startReview{
+    width: 100%;
+    background: #1d4ed8;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  .startReview:hover {
+    background: #0f3bbd;
+  }
+  

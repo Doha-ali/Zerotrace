@@ -1,0 +1,48 @@
+body{
+  background-color: #142d4c;
+}
+.wcont{
+  background-color: #052137;
+}
+.welcome {
+font-family: 'Modern Antiqua';
+font-size: 20px;
+color:  #1877F2;
+font-weight: 100;
+margin-left: 60px;
+line-height: 58.98px;
+text-align: left;
+
+}
+.cim {
+  display: flex;
+  gap: 150px;
+  width: 100%;
+  padding: 20px;
+}
+
+.imageSection {
+  flex: 1;
+}
+.imageSection img{
+  width: 450px;
+  height: 500px;
+  margin-left: 40px;
+  border-radius: 10px;
+}
+.textSection{
+  flex: 2;
+  color: #dbe2ef;
+}
+.textSection h2 {
+  color: white;
+  font-size: 45px;
+  font-weight: 700;
+  font-family: 'Montserrat';
+}
+.textSection p{
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.6;
+  font-family: 'Montserrat';
+}

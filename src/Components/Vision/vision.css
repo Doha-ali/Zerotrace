@@ -1,0 +1,249 @@
+/* Container */
+.our-vision-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 90px;
+    background-color: #052137;
+    color: white;
+    padding: 40px 60px;
+    /* max-width: 1200px; */
+    width: 100%;
+    margin: 0 auto;
+    align-items: start;
+  }
+  
+  /* Text Section */
+  .text-section h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .text-section h2 span {
+    color: #4da6ff;
+  }
+  
+  .text-section p {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  .stats {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .stats div {
+    text-align: center;
+  }
+  
+  .stats h3 {
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+  .stats p {
+    font-size: 1.5rem;
+    margin-top: 5px;
+    color: #b0b0b0;
+  }
+  
+  /* Vision Section */
+  .vision-section{
+    text-align: center;
+  }
+  .vision-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  .vision-section img {
+    width: 65%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  }
+  
+  .vision-section p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .read-more-btn {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+   
+  }
+  
+  .read-more-btn:hover {
+    background-color: #0b437b;
+    transform: translateY(-8px);
+  }
+  
+  /* Responsive Design */
+  /* @media (max-width: 768px) {
+    .our-vision-container {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  
+    .text-section h2 {
+      font-size: 1.8rem;
+    }
+  
+    .vision-section h2 {
+      font-size: 1.6rem;
+    }
+  
+    .stats h3 {
+      font-size: 1.3rem;
+    }
+  
+    .stats p {
+      font-size: 0.9rem;
+    }
+  
+    .read-more-btn {
+      font-size: 0.8rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .text-section h2 {
+      font-size: 1.5rem;
+    }
+  
+    .vision-section h2 {
+      font-size: 1.4rem;
+    }
+  
+    .read-more-btn {
+      padding: 8px 16px;
+      font-size: 0.7rem;
+    }
+  } */
+
+
+
+  @media (max-width: 1024px) {
+    .our-vision-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        padding: 30px 40px;
+    }
+
+    .text-section h2 {
+        font-size: 2.5rem;
+    }
+
+    .text-section p {
+        font-size: 1.6rem;
+    }
+
+    .stats h3 {
+        font-size: 2.5rem;
+    }
+
+    .stats p {
+        font-size: 1.4rem;
+    }
+
+    .vision-section h2 {
+        font-size: 1.6rem;
+    }
+
+    .vision-section p {
+        font-size: 1.4rem;
+    }
+}
+
+/* Mobile Large (max-width: 768px) */
+@media (max-width: 768px) {
+    .our-vision-container {
+        padding: 20px 30px;
+    }
+
+    .text-section h2 {
+        font-size: 2rem;
+    }
+
+    .text-section p {
+        font-size: 1.4rem;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .stats h3 {
+        font-size: 2rem;
+    }
+
+    .stats p {
+        font-size: 1.2rem;
+    }
+
+    .vision-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .vision-section img {
+        margin-bottom: 15px;
+    }
+
+    .vision-section p {
+        font-size: 1.3rem;
+    }
+}
+
+/* Mobile Small (max-width: 480px) */
+@media (max-width: 480px) {
+    .our-vision-container {
+        padding: 15px 20px;
+        gap: 30px;
+    }
+
+    .text-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .text-section p {
+        font-size: 1.2rem;
+    }
+
+    .stats h3 {
+        font-size: 1.8rem;
+    }
+
+    .stats p {
+        font-size: 1.1rem;
+    }
+
+    .vision-section h2 {
+        font-size: 1.3rem;
+    }
+
+    .vision-section img {
+        margin-bottom: 10px;
+    }
+
+    .vision-section p {
+        font-size: 1.1rem;
+    }
+
+    .read-more-btn {
+        padding: 8px 15px;
+        font-size: 0.8rem;
+    }
+}
+  

@@ -1,0 +1,100 @@
+
+.footer {
+    background-color: #08365B;
+    color: white;
+    padding: 40px 20px;
+    position: sticky;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .footer-logo {
+    flex: 1;
+    margin-bottom: 20px;
+  }
+  
+  .footer-logo h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-family: 'Pirata One',cursive;
+    color: rgb(248, 243, 243) !important;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+  }
+  
+  .social-icons .ii {
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .social-icons i:hover {
+    color: #ffd700;
+  }
+  
+  .footer-links {
+    display: flex;
+    flex: 3;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .footer-links div {
+    flex: 1;
+    margin-bottom: 20px;
+    min-width: 150px;
+  }
+  
+  .footer-links h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  
+  .footer-links li i {
+    margin-right: 8px;
+    color: #ffd700;
+  }
+  
+  .footer-links li:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .footer-links {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .footer-links div {
+      width: 100%;
+    }
+  }
+  

@@ -1,0 +1,46 @@
+.Tool3head{
+    width: 90%;
+    height: 70vh;
+    background-image: url(../Components/images/email\ breach.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    margin: 100px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Tool3head h1{
+    color: #fff;
+    font-size: 4rem;
+}
+.Tool3sec{
+    background-color: #052137;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.middleEmailBreach{
+ display: flex;
+ width: 90%;
+ margin: 50px 0px;
+}
+.EmailBreachText{
+    color: #fff;
+    width: 50%;
+}
+.EmailBreachImg{
+    width: 35%;
+    position: relative;
+    margin-left: 90px;
+}
+.EmailBreachImg img{
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+
+}

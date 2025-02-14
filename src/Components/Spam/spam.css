@@ -1,0 +1,117 @@
+.spamCheckContainer{
+    max-width: 600px;
+    margin: 90px auto;
+    padding: 60px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #124168;
+    text-align: center;
+    position: relative;
+  }
+  .envelope{
+    transform: rotateZ(21deg);
+    position: absolute;
+    left: 70%;
+    bottom: 85%;
+    width: 120px;
+    height: 120px;
+  }
+  .spamCheckContainer h2 {
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .spamForm {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .formGroup {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  .senderNam{
+    background-color: #fff;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .emailContent{
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: #fff;
+  }
+  
+  .emailContent{
+    height: 100px;
+    resize: vertical;
+  }
+  
+  /* Terms checkbox styling */
+  .formGroup.terms {
+    display: flex;
+    align-items: center;
+  }
+  
+  .formGroup.terms .checkBox {
+    margin-right: 10px;
+  }
+  
+  .formGroup.terms label {
+    font-weight: normal;
+  }
+  
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .checkSpam{
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+  }
+  
+  .checkSpam:hover {
+    background: #0056b3;
+  }
+  
+  .checkSpam:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .result {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .spam{
+    color: rgb(245, 59, 59);
+  }
+  .notSpam{
+    color: green;
+  }
+  
+  .error {
+    color: rgb(230, 35, 35);
+    margin-top: 10px;
+  }
+  
+  

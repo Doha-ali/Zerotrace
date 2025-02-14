@@ -1,0 +1,101 @@
+.scanContainer {
+    background-image: url(../images/scanBackGround.png);
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    margin: 40px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .scanContainer h2 {
+    margin-bottom: 60px;
+    color: #fff;
+  }
+  
+  .scan-types {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 120px;
+  }
+  
+  .scantype {
+    padding: 10px 30px;
+    cursor: pointer;
+    border: 1px solid rgb(17, 156, 183);
+    border-radius: 5px;
+    transition: border 0.3s, background 0.3s;
+    text-align: left;
+    background-image: linear-gradient(to bottom  ,#12416870 , #124168 );
+    color: #fff;
+    position: relative;
+  }
+  .scan-icon{
+    width: 130px;
+    height: 130px;
+    /* margin-bottom: 15px; */
+    /* object-fit: contain; */
+    position: absolute;
+    left: 65%;
+    top: -55%;
+  }
+  .scantype hr{
+    background-image: linear-gradient(to right , #F9F8F700 ,#FBFAFA, #F9F8F700);
+  }
+  .scantype:hover {
+    background: rgb(17, 156, 183);
+  }
+  
+  .scantype.selected {
+    border: 2px solid rgb(17, 156, 183);
+    background: rgb(17, 156, 183);
+  }
+  
+  .scanForm{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+  }
+  
+  .scanInput[type='url'] {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .scanInput::placeholder{
+    color: #5d5c5c;
+  }
+  .scanForm button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 30%;
+    margin: auto;
+  }
+  
+  .scanForm button:disabled {
+    background: #aaa;
+    cursor: not-allowed;
+  }
+  
+  .error-message {
+    color: red;
+    margin-top: 10px;
+  }
+  
+  .result-message {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  

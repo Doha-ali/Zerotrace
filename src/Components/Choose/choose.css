@@ -1,0 +1,51 @@
+.myBody {
+  font-family: 'Montserrat';
+  margin: 0;
+  padding: 0;
+  background-color: #142d4c;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.chooseContainer {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  padding: 20px;
+}
+.card {
+  background: linear-gradient(177.72deg, #133F61 62.5%, #2B5E88 96.16%);
+  border-radius: 10px;
+  padding: 30px;
+  margin: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  /* max-width: 210px; */
+  width: 25%;
+  text-align: center;
+  flex: 1;
+}
+
+.card h2 {
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #fff;
+}

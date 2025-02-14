@@ -1,0 +1,106 @@
+.mcqContainer {
+    /* max-width: 800px; */
+    margin:  auto;
+    padding: 20px;
+    background-color: #061c2a;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* display: grid;
+    grid-template-columns: 1fr; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    padding: 50px 30px;
+    
+  }
+  
+  /* FAQ heading */
+  .mcqContainer h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* List of FAQ items */
+  .mcqList {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  /* Individual FAQ item */
+  .mcqItem {
+    background-color: #0F314E;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    color: #fff;
+  }
+  
+.mcqtext{
+    width: 35%;
+    text-align: center;
+    color: #fff;
+
+}
+.mcqtext h2{
+    color: #fff;
+}
+/* .mcqtext button{
+    width: 50%;
+    color: #fff;
+    border: 1px solid #fff;
+    background-color: transparent;
+    border-radius: 15px;
+}
+.mcqtext button:hover{
+    background-color: #007bff;
+    color: #fff;
+} */
+  /* FAQ question */
+  .mcqQuestion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 8px;
+    color: #fff;
+  }
+  
+  .mcqQuestion h3 {
+    font-size: 18px;
+    margin: 0;
+  }
+  .mcqQuestion span{
+    color: #fff;
+  }
+  /* Toggle icon (plus/minus) */
+  .toggle-icon {
+    font-size: 20px;
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  /* FAQ answer */
+  .mcqAnswer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 15px;
+  }
+  
+  .mcqAnswer.active {
+    max-height: 200px; /* Adjust based on the expected answer height */
+    padding: 15px;
+  }
+  
+  .mcqAnswer p {
+    font-size: 14px;
+    color: #c4c1c1;
+    line-height: 1.5;
+    margin: 0;
+}
