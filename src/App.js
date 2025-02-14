@@ -22,27 +22,27 @@ import Useracount from "./Pages/Useracount/useracount";
 function App() {
   return (
     <div>
-      <BrowserRouter>
-      <Navbar/>
-      <Routes>
-        <Route path="/" element ={<Home/>}/>
-        <Route path="/Faq" element ={ <Faq/>}/>
-        <Route path="/AboutUs" element ={ <AboutUs/>}/>
-        <Route path="/ContactUs" element ={ <ContactUs/>}/>
-        <Route path="/Tools" element ={ <Tools/>}/>
-        <Route path="/Chatbot" element ={ <Chatbot/>}/>
-        <Route path="/Useracount" element ={ <Useracount/>}/>
-        {/* <Route path="/VulnerScan" element={<ProtectedRoute><VulnerScan/></ProtectedRoute>} /> */}
-          <Route path="/VulnerScan" element={<VulnerScan/>}/>
-          <Route path="/CodeReviews" element={<CodeReviews/>} />
-          <Route path="/Emailbreach" element={<Emailbreach/>} />
-          <Route path="/Emailspam" element={<Emailspam/>} />
-          <Route path="/PasswordManager" element={<PasswordManager/>} />
-          <Route path="/Signup" element ={ <Signup/>}/>
-          <Route path="/Login" element ={ <Login/>}/>
-      </Routes>
-      <Footer/>
-      </BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
+  <Navbar />
+  <Routes>
+    <Route path="/" element={<Login />} />  {/* Root now shows Login */}
+    <Route path="/Faq" element={<Faq />} />
+    <Route path="/AboutUs" element={<AboutUs />} />
+    <Route path="/ContactUs" element={<ContactUs />} />
+    <Route path="/Tools" element={<Tools />} />
+    <Route path="/Chatbot" element={<Chatbot />} />
+    <Route path="/Useracount" element={<Useracount />} />
+    <Route path="/VulnerScan" element={<VulnerScan />} />
+    <Route path="/CodeReviews" element={<CodeReviews />} />
+    <Route path="/Emailbreach" element={<Emailbreach />} />
+    <Route path="/Emailspam" element={<Emailspam />} />
+    <Route path="/PasswordManager" element={<PasswordManager />} />
+    <Route path="/Signup" element={<Signup />} />
+    <Route path="/Login" element={<Login />} />
+    <Route path="/Home" element={<Home />} /> {/* Optionally moved Home to another path */}
+  </Routes>
+  <Footer />
+</BrowserRouter>
     </div>
   );
 }

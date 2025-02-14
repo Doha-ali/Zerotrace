@@ -131,7 +131,7 @@ const Login = () => {
         localStorage.setItem("token", response.data.token);
         localStorage.setItem("isAuthenticated", "true");
 
-        const redirectTo = localStorage.getItem("redirectAfterLogin") || "/";
+        const redirectTo = localStorage.getItem("redirectAfterLogin") || "/Home";
         localStorage.removeItem("redirectAfterLogin");
         navigate(redirectTo);
 
