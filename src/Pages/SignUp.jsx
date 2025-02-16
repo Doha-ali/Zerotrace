@@ -233,7 +233,7 @@ const Signup = () => {
         console.log("API Response:", response.data);
         console.log(response.data.token)
 
-        const redirectTo = localStorage.getItem("redirectAfterLogin") || "/Home";
+        const redirectTo = localStorage.getItem("redirectAfterLogin") || "/";
         localStorage.removeItem("redirectAfterLogin");
         navigate(redirectTo);
         // navigate('/Login')
