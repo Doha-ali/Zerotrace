@@ -39,3 +39,78 @@ transform: translate(-50%,-50%);
     background-color:#174e8d ;
     border: 2px solid #58a6ff
 }
+
+@media (max-width: 1024px) {
+    .secchat {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+        text-align: center;
+        padding: 60px 20px;
+    }
+
+    .chatText {
+        width: 80%;
+    }
+
+    .chatText p {
+        font-size: 2.5rem;
+    }
+
+    .chatStart {
+        width: 50%;
+        font-size: 1rem;
+        padding: 10px 30px;
+    }
+
+    .chatimage {
+        width: 80%;
+        margin-top: 30px;
+    }
+}
+
+/* Mobile Large (max-width: 768px) */
+@media (max-width: 768px) {
+    .secchat {
+        padding: 40px 15px;
+    }
+
+    .chatText {
+        width: 100%;
+    }
+
+    .chatText p {
+        font-size: 2rem;
+    }
+
+    .chatStart {
+        width: 60%;
+        font-size: 0.9rem;
+        padding: 8px 25px;
+    }
+
+    .chatimage {
+        width: 100%;
+    }
+}
+
+/* Mobile Small (max-width: 480px) */
+@media (max-width: 480px) {
+    .secchat {
+        padding: 30px 10px;
+    }
+
+    .chatText p {
+        font-size: 1.5rem;
+    }
+
+    .chatStart {
+        width: 70%;
+        font-size: 0.8rem;
+        padding: 6px 20px;
+    }
+
+    .chatimage {
+        width: 100%;
+    }
+}

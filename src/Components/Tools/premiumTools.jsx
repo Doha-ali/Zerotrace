@@ -56,9 +56,9 @@ const PremiumTools = () => {
     if (isAuthenticated) {
       navigate(link); // Navigate to the feature page
     } else {
-      // localStorage.setItem("redirectAfterLogin", link);
-      // navigate("/signup"); 
-      navigate(link);
+      localStorage.setItem("redirectAfterLogin", link);
+      navigate("/signup"); 
+      // navigate(link);
     }
   };
 

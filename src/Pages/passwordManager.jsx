@@ -124,7 +124,7 @@ const PasswordManager = () => {
   const handleLogin = async () => {
     try {
       const response = await axios.post(
-        'https://d28c-102-186-81-78.ngrok-free.app/broject%20login&register/login-api.php',
+        'https://421d-102-186-81-78.ngrok-free.app/broject%20login&register/login-api.php',
         { email, password },
         {
           headers: { "Content-Type": "application/json" },
@@ -148,7 +148,7 @@ const PasswordManager = () => {
       "123456", "000000", "111111", "222222", "333333",
       "444444", "555555", "666666", "777777", "888888", "999999"
     ];
-  
+
     if (!/^\d{6}$/.test(code)) {
       alert("Please enter a valid 6-digit code.");
       return;
@@ -175,7 +175,7 @@ const PasswordManager = () => {
   const handleSaveWebsite = async () => {
     try {
       const response = await axios.post(
-        'https://d28c-102-186-81-78.ngrok-free.app/password%20manager/save_password.php',
+        'https://421d-102-186-81-78.ngrok-free.app/password%20manager/save_password.php',
         {
           website_name: newWebsite.name,
           account: newWebsite.email,
@@ -187,12 +187,15 @@ const PasswordManager = () => {
         }
       );
       const encryptedPassword = response.data.encryptedPassword;
+      // When saving a new website, we don’t have the decrypted password yet,
+      // so we use the encrypted version (or simply mask it)
       const websiteEntry = {
         ...newWebsite,
         id: response.data.id || Date.now(),
         encryptedPassword,
+        // For consistency, mark as not revealed (even if API would decrypt it)
         isDecrypted: false,
-        decryptedPassword: ''
+        decryptedPassword: '' // will be populated if you re-fetch or via a specific API call
       };
       setWebsites([...websites, websiteEntry]);
       setNewWebsite({ name: '', email: '', password: '' });
@@ -202,7 +205,7 @@ const PasswordManager = () => {
     }
   };
 
-  // Toggle showing website details
+  // Toggle showing website details (expand/collapse)
   const toggleWebsiteDetails = (id) => {
     setOpenWebsiteId(openWebsiteId === id ? null : id);
   };
@@ -212,43 +215,40 @@ const PasswordManager = () => {
     setWebsites(websites.filter(site => site.id !== id));
   };
 
-  // Decrypt password
-  const handleShowPassword = async (id) => {
-    try {
-      const website = websites.find(site => site.id === id);
-      const response = await axios.post(
-        'https://your-backend.com/decrypt',
-        { encryptedPassword: website.encryptedPassword }
-      );
-      const decryptedPassword = response.data.decryptedPassword;
-      const updatedWebsites = websites.map(site => {
-        if (site.id === id) {
-          return { ...site, isDecrypted: true, decryptedPassword };
-        }
-        return site;
-      });
-      setWebsites(updatedWebsites);
-    } catch (error) {
-      alert('Error decrypting password');
-    }
+  // "Show" button handler to reveal the decrypted password
+  // In this version, we simply update the state to mark the password as revealed.
+  const handleShowPassword = (id) => {
+    const updatedWebsites = websites.map(site =>
+      site.id === id ? { ...site, isDecrypted: true } : site
+    );
+    setWebsites(updatedWebsites);
   };
 
-  // Fetch saved websites from backend on component mount
+  // Fetch saved websites from backend on component mount (when step 3 starts)
   useEffect(() => {
     const fetchWebsites = async () => {
       try {
         const response = await axios.get(
-          'https://d41d-102-186-81-78.ngrok-free.app//password%20manager/get_saved_passwords.php',
+          'https://421d-102-186-81-78.ngrok-free.app/password%20manager/show.php',
           { withCredentials: true }
         );
-        // Assuming your backend returns an array of saved websites
-        setWebsites(response.data.websites);
+        console.log("API Response:", response.data)
+        // The API returns an object with "accounts" as an array.
+        // We map these accounts to our website objects and mark them as "hidden" (isDecrypted: false)
+        const websitesData = response.data.accounts.map(account => ({
+          id: account.id,
+          name: account.website_name, // assuming the API uses "platform" for the website name
+          email: account.account,
+          decryptedPassword: account.password, // the actual (decrypted) password from the API
+          isDecrypted: false  // initially, do not reveal the password
+        }));
+        setWebsites(websitesData);
       } catch (error) {
         console.log('Error fetching websites:', error.message);
       }
     };
 
-    // Only fetch if user is already logged in (cookie exists)
+    // Only fetch if user is already logged in (step 3)
     if (step === 3) {
       fetchWebsites();
     }
@@ -259,7 +259,7 @@ const PasswordManager = () => {
       <section className="Tool5head">
         <h1>Password Manager</h1>
       </section>
-  
+
       {step === 1 && (
         <div className="loginPage">
           <h2>Enter password & email</h2>
@@ -278,7 +278,7 @@ const PasswordManager = () => {
           <button onClick={handleLogin}>Join</button>
         </div>
       )}
-  
+
       {step === 2 && (
         <div className="twofaPage">
           <img src={twoFA} alt="Two-factor authentication" />
@@ -293,11 +293,11 @@ const PasswordManager = () => {
             onChange={(e) => setCode(e.target.value)}
             maxLength={6}
           />
-          <button onClick={handle2FA} className="conf">confirm</button>
+          <button onClick={handle2FA} className="conf">Confirm</button>
           <button onClick={() => setStep(1)} className="back">Back</button>
         </div>
       )}
-  
+
       {step === 3 && (
         <div className="dashboard">
           <div className="dashboardHeader">
@@ -330,7 +330,7 @@ const PasswordManager = () => {
               </div>
             </div>
           )}
-  
+
           <div className="credentials-list">
             {websites.map((site) => (
               <div key={site.id} className="credential-item">
@@ -339,14 +339,20 @@ const PasswordManager = () => {
                 </div>
                 {openWebsiteId === site.id && (
                   <div className="credential-details">
-                    <div><strong>Email:</strong> {site.email}</div>
                     <div>
-                      <strong>Password:</strong> {site.isDecrypted ? site.decryptedPassword : site.encryptedPassword}
+                      <strong>Email:</strong> {site.email}
+                    </div>
+                    <div>
+                      <strong>Password:</strong>{" "}
+                      {site.isDecrypted ? site.decryptedPassword : '********'}
                     </div>
                     <div className="detail-buttons">
-                      <button onClick={() => handleDeleteWebsite(site.id)}>Delete</button>
-                      <button>Edit</button>
-                      <button onClick={() => handleShowPassword(site.id)}>Show</button>
+                      <button onClick={() => handleDeleteWebsite(site.id)} className='detailsButtonsBtn'>Delete</button>
+                      {/* <button>Edit</button> */}
+                      {/* The Show button will reveal the decrypted password */}
+                      {!site.isDecrypted && (
+                        <button onClick={() => handleShowPassword(site.id)} className='detailsButtonsBtn'>Show</button>
+                      )}
                     </div>
                   </div>
                 )}
@@ -360,3 +366,4 @@ const PasswordManager = () => {
 };
 
 export default PasswordManager;
+
