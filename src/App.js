@@ -34,12 +34,12 @@ function App() {
     <Route path="/Useracount" element={<Useracount />} />
      <Route path="/VulnerScan" element={<ProtectedRoute><VulnerScan/></ProtectedRoute>} />
     {/* <Route path="/VulnerScan" element={<VulnerScan />} /> */}
-    <Route path="/CodeReviews" element={<ProtectedRoute><CodeReviews /></ProtectedRoute>} />
+    <Route path="/CodeReviews" element={<CodeReviews />} />
     <Route path="/Emailbreach" element={<ProtectedRoute><Emailbreach /></ProtectedRoute>} />
-    <Route path="/Emailspam" element={<ProtectedRoute><Emailspam /></ProtectedRoute>} />
+    <Route path="/Emailspam" element={<Emailspam />} />
     <Route path="/PasswordManager" element={<ProtectedRoute><PasswordManager /></ProtectedRoute>} />
-    <Route path="/Signup" element={<Signup />} />
-    <Route path="/Login" element={<Login />} />
+    <Route path="/Signup" element={<Signup />}/>
+    <Route path="/Login" element={<Login />}/>
   </Routes>
   <Footer />
 </BrowserRouter>

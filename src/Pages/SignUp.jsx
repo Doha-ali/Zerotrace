@@ -220,7 +220,7 @@ const Signup = () => {
 
     try {
       const response = await axios.post(
-        "https://421d-102-186-81-78.ngrok-free.app/broject%20login&register/signup-api.php",
+        "https://d1bd-102-186-81-78.ngrok-free.app/broject%20login&register/signup-api.php",
         { full_name, email, password, confirm_password },
         { headers: { "Content-Type": "application/json" },
         withCredentials: false, }
@@ -233,7 +233,9 @@ const Signup = () => {
         console.log("API Response:", response.data);
         console.log(response.data.token)
 
-        const redirectTo = localStorage.getItem("redirectAfterLogin") || "/";
+        // const redirectTo = localStorage.getItem("redirectAfterLogin") || "/";
+        const storedRedirect = localStorage.getItem("redirectAfterLogin");
+        const redirectTo = storedRedirect && storedRedirect.trim() ? storedRedirect : "/";
         localStorage.removeItem("redirectAfterLogin");
         navigate(redirectTo);
         // navigate('/Login')
