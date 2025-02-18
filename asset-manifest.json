@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Zerotrace/static/css/main.9d6e6fb4.css",
-    "main.js": "/Zerotrace/static/js/main.9b8fc18c.js",
+    "main.css": "/Zerotrace/static/css/main.33cac8ff.css",
+    "main.js": "/Zerotrace/static/js/main.d0261873.js",
     "static/js/488.f7ae425c.chunk.js": "/Zerotrace/static/js/488.f7ae425c.chunk.js",
     "static/media/zero trace background.jpg": "/Zerotrace/static/media/zero trace background.c411b02e63b076257a70.jpg",
     "static/media/tools.png": "/Zerotrace/static/media/tools.979ca648671e89c56f67.png",
@@ -35,12 +35,12 @@
     "static/media/light scan.png": "/Zerotrace/static/media/light scan.8e14c471c3871184bfbd.png",
     "static/media/user.jpg": "/Zerotrace/static/media/user.b7ebfcc197ebc40b234c.jpg",
     "index.html": "/Zerotrace/index.html",
-    "main.9d6e6fb4.css.map": "/Zerotrace/static/css/main.9d6e6fb4.css.map",
-    "main.9b8fc18c.js.map": "/Zerotrace/static/js/main.9b8fc18c.js.map",
+    "main.33cac8ff.css.map": "/Zerotrace/static/css/main.33cac8ff.css.map",
+    "main.d0261873.js.map": "/Zerotrace/static/js/main.d0261873.js.map",
     "488.f7ae425c.chunk.js.map": "/Zerotrace/static/js/488.f7ae425c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9d6e6fb4.css",
-    "static/js/main.9b8fc18c.js"
+    "static/css/main.33cac8ff.css",
+    "static/js/main.d0261873.js"
   ]
 }
