@@ -98,4 +98,52 @@
     margin-top: 10px;
     font-weight: bold;
   }
+
+  .emailPopup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .popupContent {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+
+  .popupContent h3 {
+    margin-bottom: 10px;
+  }
+  
+  .popupContent input {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .popupContent button {
+    margin: 5px;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .popupContent button:first-of-type {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .popupContent button:last-of-type {
+    background-color: #dc3545;
+    color: white;
+  }
   

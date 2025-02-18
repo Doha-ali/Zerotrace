@@ -32,7 +32,7 @@ function App() {
     <Route path="/Tools" element={<Tools />} />
     <Route path="/Chatbot" element={<Chatbot />} />
     <Route path="/Useracount" element={<Useracount />} />
-     <Route path="/VulnerScan" element={<ProtectedRoute><VulnerScan/></ProtectedRoute>} />
+    <Route path="/VulnerScan" element={<ProtectedRoute><VulnerScan/></ProtectedRoute>} />
     {/* <Route path="/VulnerScan" element={<VulnerScan />} /> */}
     <Route path="/CodeReviews" element={<ProtectedRoute><CodeReviews/></ProtectedRoute>} />
     <Route path="/Emailbreach" element={<ProtectedRoute><Emailbreach/></ProtectedRoute>} />
