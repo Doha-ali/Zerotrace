@@ -124,7 +124,7 @@ const PasswordManager = () => {
   const handleLogin = async () => {
     try {
       const response = await axios.post(
-        'https://d1bd-102-186-81-78.ngrok-free.app/broject%20login&register/login-api.php',
+        'https://1838-102-184-171-122.ngrok-free.app/broject%20login&register/login-api.php',
         { email, password },
         {
           headers: { "Content-Type": "application/json" },
@@ -175,7 +175,7 @@ const PasswordManager = () => {
   const handleSaveWebsite = async () => {
     try {
       const response = await axios.post(
-        'https://421d-102-186-81-78.ngrok-free.app/password%20manager/save_password.php',
+        'https://1838-102-184-171-122.ngrok-free.app/password%20manager/save_password.php',
         {
           website_name: newWebsite.name,
           account: newWebsite.email,
@@ -229,7 +229,7 @@ const PasswordManager = () => {
     const fetchWebsites = async () => {
       try {
         const response = await axios.get(
-          'https://421d-102-186-81-78.ngrok-free.app/password%20manager/show.php',
+          'https://1838-102-184-171-122.ngrok-free.app/password%20manager/show.php',
           { withCredentials: true }
         );
         console.log("API Response:", response.data)

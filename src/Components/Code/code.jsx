@@ -28,21 +28,22 @@ const CodeReview = () => {
       setResult("🔍 Analyzing code for security vulnerabilities...");
 
       const response = await axios.post(
-        `https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=${API_KEY}`,
+        `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${API_KEY}`,
         {
-          contents: [
-            {
-              parts: [
-                {
-                  text: `Analyze the following code for security vulnerabilities. Identify potential threats such as SQL injection, XSS, authentication flaws, or insecure data handling. Provide recommended fixes with explanations.\n\n${code}`,
-                },
-              ],
-            },
-          ],
+          model: "gemini-pro",
+          prompt: {
+            text: `Analyze the following code for security vulnerabilities. Identify potential threats such as SQL injection, XSS, authentication flaws, or insecure data handling. Provide recommended fixes with explanations.\n\n${code}`,
+          },
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
         }
       );
+      
 
-      const reviewResult = response.data?.candidates?.[0]?.content?.parts?.[0]?.text || "⚠️ No response received.";
+      const reviewResult = response.data?.candidates?.[0]?.output || "⚠️ No response received.";
       
       // Format the response for readability
       setResult(reviewResult.replace(/\n/g, "\n\n"));

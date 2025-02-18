@@ -220,7 +220,7 @@ const Signup = () => {
 
     try {
       const response = await axios.post(
-        "https://d1bd-102-186-81-78.ngrok-free.app/broject%20login&register/signup-api.php",
+        "https://1838-102-184-171-122.ngrok-free.app/broject%20login&register/signup-api.php",
         { full_name, email, password, confirm_password },
         { headers: { "Content-Type": "application/json" },
         withCredentials: false, }

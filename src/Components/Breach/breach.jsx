@@ -15,7 +15,7 @@ const EmailBreachCheck = () => {
     setResult(null);
 
     try {
-      const response = await axios.post("https://b7df-102-186-81-78.ngrok-free.app/email%20breach%20detection/check-breach.php", { email });
+      const response = await axios.post("https://1838-102-184-171-122.ngrok-free.app/email%20breach%20detection/check-breach.php", { email });
       setResult(response.data.breached ? "Your email has been breached!" : "Your email is safe.");
     } catch (err) {
       setError("Failed to check breach status. Please try again.");
